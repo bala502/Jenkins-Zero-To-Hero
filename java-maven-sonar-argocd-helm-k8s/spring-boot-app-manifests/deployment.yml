@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-boot-app
-        image: tnikhil22/bala-ultimate-cicd:replaceImageTag
+        image: tnikhil22/bala-ultimate-cicd:17
         ports:
         - containerPort: 8080
