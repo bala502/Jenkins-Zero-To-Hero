@@ -44,9 +44,10 @@ pipeline {
       }
        stage('Push Docker Image to docker hub') {
     steps{
-          withCredentials([usernameColonPassword(credentialsId: 'DOCKER_CRED', variable: 'DOCKER_CRED')]) {
-            sh "docker login -u ${DOCKER_CRED} -p ${DOCKER_CRED}"
+      withCredentials([string(credentialsId: 'DOCKER_CRED', variable: 'DOCKER_CRED')]) {
+       sh "docker login -u ${DOCKER_CRED} -p ${DOCKER_CRED}"
 }
+
             sh "docker push tnikhil22/bala-ultimate-cicd:${BUILD_NUMBER} "
     }
 
