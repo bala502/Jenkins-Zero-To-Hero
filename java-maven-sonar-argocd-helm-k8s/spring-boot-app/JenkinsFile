@@ -32,7 +32,7 @@ pipeline {
 
        stage('Build Docker Image') {
       environment {
-  DOCKER_IMAGE = "bala-ultimate-cicd:${BUILD_NUMBER}"
+  DOCKER_IMAGE = "tnikhil22/bala-ultimate-cicd:${BUILD_NUMBER}"
 }
 
       steps {
