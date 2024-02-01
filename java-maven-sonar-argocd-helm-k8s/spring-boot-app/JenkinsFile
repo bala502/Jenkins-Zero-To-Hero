@@ -30,7 +30,7 @@ pipeline {
 		        }
                               }	
 
-		 stage('Build and Push Docker Image') {
+    stage('Build and Push Docker Image') {
       environment {
   DOCKER_IMAGE = "bala-ultimate-cicd:${BUILD_NUMBER}"
 }
