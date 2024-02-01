@@ -48,7 +48,7 @@ pipeline {
        sh "docker login -u tnikhil22 -p ${DOCKER_CRED}"
 }
 
-            sh "docker push tnikhil22/bala-ultimate-cicd:${BUILD_NUMBER} "
+            sh "docker push tnikhil22/bala-ultimate-cicd:${BUILD_NUMBER}"
     }
 
         }
